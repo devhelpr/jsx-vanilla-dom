@@ -1,5 +1,14 @@
 # Vanilla JSX Support for raw DOM elements
 
+## Start project
+
+```
+npm install
+npm run dev
+```
+
+## Usage
+
 The following is a simple implementation of JSX support for raw DOM elements. This is a simple implementation that does not support all the features of JSX. It is a simple implementation that allows for the use of JSX in a project that does not use a framework like React but just vanilla DOM.
 
 ```jsx
