@@ -11,15 +11,15 @@ renderElement(<Element />, document.body);
 
 ```
 
-createJSXElement itself uses a basic helper function to create DOM elements using document.createElement and setting attributes.
+createJSXElement itself uses a basic helper function to create DOM elements using document.createElement and sets attributes/classes/basic event handlers.
 
 To make the above possible in a typescript project, the following additions are needed in the `tsconfig.json` file:
 
 ```json
 {
   "compilerOptions": {
-	"jsx": "react",
-	"jsxFactory": "createJSXElement"
+    "jsx": "react",
+    "jsxFactory": "createJSXElement"
   }
 }
 ```
