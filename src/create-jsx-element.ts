@@ -1,7 +1,3 @@
-// declare namespace JSX {
-//   interface Element extends HTMLElement {}
-// }
-
 import { EventHandler, createElement } from "./create-element";
 
 export const createJSXElement = (
