@@ -7,7 +7,7 @@ npm install
 npm run dev
 ```
 
-## Usage
+## Implementation details and usage
 
 The following is a simple implementation of JSX support for raw DOM elements. This is a simple implementation that does not support all the features of JSX. It is a simple implementation that allows for the use of JSX in a project that does not use a framework like React but just vanilla DOM.
 
@@ -55,3 +55,8 @@ declare global {
 }
 ```
 
+## Difference with React JSX
+
+React uses a virtual DOM implementation under the hood to manage the DOM. This implementation does not use a virtual DOM. It directly manipulates the DOM. There's no state management or lifecycle methods in this implementation. 
+
+The jsx element are converted to function calls by typescript using settings in the tsconfig.json file. The function that is called is createJSXElement, which is defined in this project. This function creates the DOM elements and sets the attributes/classes/event handlers.
