@@ -1,5 +1,11 @@
 import { EventHandler, createElement } from "./create-element";
 
+export const Fragment = (_props: any, children: any[]) => {
+  const fragment = document.createDocumentFragment();
+  fragment.append(...children);
+  return fragment;
+};
+
 export const createJSXElement = (
   tag: any,
   properties: any,
