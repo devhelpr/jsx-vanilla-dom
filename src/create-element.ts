@@ -1,17 +1,15 @@
-export interface JSXElement<P = any, T = string> {
+export interface JSXElement<P = unknown, T = string> {
   type: T;
   props: P;
 }
 
-type Tag = string | ((props: any, children: any[]) => HTMLElement);
+type Tag = string | ((props: unknown, children: unknown[]) => HTMLElement);
 
 declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace JSX {
-    // eslint-disable-next-line @typescript-eslint/no-empty-interface
-    interface Element extends JSXElement<any, Tag> {}
+    interface Element extends JSXElement<unknown, Tag> {}
     interface IntrinsicElements {
-      [elemName: string]: any;
+      [elemName: string]: unknown;
     }
   }
 }
@@ -25,7 +23,10 @@ export type DOMElementNode = HTMLElement | SVGElement | Text;
 
 export type EventHandler = (event: Event) => void | boolean;
 
-export const renderElement = (element: JSX.Element, parent: HTMLElement) => {
+export const renderElement = (
+  element: JSX.Element,
+  parent: HTMLElement | ShadowRoot
+) => {
   parent.appendChild(element as unknown as HTMLElement);
 };
 
