@@ -1,4 +1,4 @@
-import { createJSXElement } from "./create-jsx-element";
+import { createJSXElement, Fragment } from "./create-jsx-element";
 
 export function Counter() {
   let div: HTMLDivElement | null = null;
@@ -13,11 +13,11 @@ export function Counter() {
   setCounter(0);
 
   return (
-    <div>
+    <>
       <button class="button" click={(e: MouseEvent) => setCounter(counter + 1)}>
         Click
       </button>
       <div getElement={(element: HTMLDivElement) => (div = element)}></div>
-    </div>
+    </>
   );
 }
