@@ -14,8 +14,10 @@ export function Counter() {
 
   return (
     <div>
+      <button class="button" click={(e: MouseEvent) => setCounter(counter + 1)}>
+        Click
+      </button>
       <div getElement={(element: HTMLDivElement) => (div = element)}></div>
-      <button click={(e: MouseEvent) => setCounter(counter + 1)}>Click</button>
     </div>
   );
 }
