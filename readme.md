@@ -57,6 +57,6 @@ declare global {
 
 ## Difference with React JSX
 
-React uses a virtual DOM implementation under the hood to manage the DOM. This implementation does not use a virtual DOM. It directly manipulates the DOM. There's no state management or lifecycle methods in this implementation. 
+React uses a virtual DOM implementation under the hood to manage the DOM. This implementation does not use a virtual DOM. It directly manipulates the DOM. Although there's no state management or lifecycle methods in this implementation, it does allow for composition using JSX components which leads to cleaner more readable declarative code in a Vanilla DOM codebase.
 
-The jsx element are converted to function calls by typescript using settings in the tsconfig.json file. The function that is called is createJSXElement, which is defined in this project. This function creates the DOM elements and sets the attributes/classes/event handlers.
+The jsx elements are converted to function calls by typescript using settings in the tsconfig.json file. The function that is called is createJSXElement, which is defined in this project. This function creates the DOM elements and sets the attributes/classes/event handlers.
