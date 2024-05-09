@@ -32,6 +32,7 @@ To make the above possible in a typescript project, the following additions are 
   }
 }
 ```
+See https://www.typescriptlang.org/docs/handbook/jsx.html for more details on the jsx settings.
 
 And some global types need to be added to the project:
 
